@@ -238,4 +238,9 @@ public class VehicleService {
 
         return comparison;
     }
+
+    public Vehicle createVehicle(Vehicle vehicle) {
+        vehicle.setId(null);
+        return integrationService.save(vehicle);
+    }
 }
